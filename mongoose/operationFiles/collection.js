@@ -1,6 +1,7 @@
 let mongoose = require('mongoose');
 
-let { collection, schema } = require('./config')
+let { collection } = require('./config')
+let { schema } = require('./originData')
 
 let monSchema = new mongoose.Schema(schema);
 
