@@ -9,7 +9,12 @@ let url = `mongodb://localhost:27017/${dbname}`;
 
 connection(url);
 
-for (let i in originData) {
-  let temp = new collection(originData[i]);
-  temp.save(err => { if (err) return console.error(err); });
-}
+collection.find(function (err, data) {
+  if (err) return console.error(err)
+  console.log('------>', data)
+})
+
+// for (let i in originData) {
+//   let temp = new collection(originData[i]);
+//   temp.save(err => { if (err) return console.error(err); });
+// }
